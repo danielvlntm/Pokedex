@@ -100,7 +100,7 @@ li {
   font-weight: 750;
 	text-align: left;
 }
-span {
+.tit {
 	color: yellow;
 	text-transform: capitalize;
 	text-shadow: 2px 2px 0 black;
