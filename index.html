@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Links -->
+	<link rel="icon" href="./favicons/favicon-16x16.png">
+	<link rel="stylesheet" href="./css/pokedex.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<!-- Main JS-->
+  <script defer src="./js/script.js"></script>
+	<title>Pokédex</title>
+
+</head>
+<body> 
+
+    
+	<main>
+		<div class="pokedex">
+	    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="0,115 100,115 130,45 369,45" style="fill: none; stroke: black; stroke-width: 3px"/>
+				<polyline points="15,115 15,590 350,590 350,45" style="fill: none; stroke: black; stroke-radius: 3px; stroke-width: 3px"/>
+<polygon points="350,115 369,115 369,180 350,180 350,490 369,490 369,555 350,555" style="fill: #CE1C24; stroke: black; stroke-width: 3px"/>
+
+
+
+            </svg>
+
+		
+			
+					<div class="circle">
+						<div class="lightblue">
+						</div>
+          </div>
+					<div class="aaa">
+					<div class="red padron pos-0 pos-1">
+						<div class="light-red padron2 pos-0 pos-1-1">
+						</div>
+          </div>
+					<div class="yellow padron pos-0 pos-2">
+						<div class="light-yellow padron2 pos-0 pos-2-2">
+						</div>
+          </div>
+					<div class="green padron pos-0 pos-3">
+						<div class="light-green padron2 pos-0 pos-3-3">
+						</div>
+          </div>
+					</div>
+
+
+
+				<div class="pokemon__gray">
+					<div class="display color">
+						<img src="#" alt="pokemon" class="pokemon__image">
+					</div>
+				</div>
+
+		<button translate="no" class="shiny">Icon</button>
+		<button translate="no" class="btn__stats">Info</button>
+		<button translate="no" class="close" onclick="fecha()">Close</button>
+
+		<h1 translate="no" class="pokemon__data">
+			<span class="pokemon__number"></span> -
+			<span class="pokemon__name"></span>
+		</h1>
+
+		<form class="form">
+			<input 
+					type="search"
+				  class="input__search"
+				  placeholder="Name or Number"
+				  required
+			/>
+		</form>
+		<ul translate="no" class="stats">
+			<img class="pokemon__anime" src="#" alt="pokemon__anime">
+			<li translate="no" class="tit">Information:</li>
+			<li class="type">Type:</li>
+			<li class="hp">Hp</li>
+			<li class="atk">Attack:</li>
+			<li class="def">Deffense:</li>
+
+			<li class="spd">Speed:</li>
+			<li class="ability">Ability:</li>
+
+		</ul>
+
+		<div class="buttons">
+			<button class="button btn-prev">&lt; Prev</button>
+			<button class="button btn-next">Next &gt;</button>
+		</div>
+
+
+		</div>
+			<div id="cp" class="capa" style="animation: caa;">
+		<svg class="aqi cap" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="353,616 1,616 1,115 100,115 130,45 353,45" style="fill: #CE1C24; stroke: black; stroke-width: 3px"/>
+				</svg>
+					<svg class="aqi abrir" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+					<polygon points="20,290 20,380 80,330" style="fill: #fecb65; stroke: black; stroke-width: 3px; animation: go-back 0.9s infinite alternate;" onclick="abre()"
+   />
+
+				</svg>
+		<img class="ima" src="images/poke.png" alt=""/>
+				<div class="det"></div>
+				</div>	
+			
+			
+
+	</main>
+
+
+</body>
+</html>
