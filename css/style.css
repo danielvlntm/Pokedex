@@ -1,50 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 * {
-	margin: 0;
+	margin: 0%;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Oxanium', cursive;
-}
-
-body {
 	text-align: center;
-	background: linear-gradient(to bottom, #6ab7f5, lightblue, #fff);
-	min-height: 100vh;
+}
+svg {
+	display: flex;
+
+	position: relative;
 }
 
 main {
 	display: inline-block;
-	margin-top: 8%;
-	padding: 13px;
+	margin-top: 2%;
 	position: relative;
-}
-.pokedex {
-	width: 100%;
-	max-width: 425px;
 }
 
 .pokemon__image {
 	position: absolute;
-	bottom: 53%;
-	left: 52%;
+	bottom: 22%;
+	left: 58%;
 	transform: translate(-63%, 20%);
-	height: 23%;
+	height: 98%;
 }
 .pokemon__anime {
 	position: absolute;
 	bottom: 58%;
 	left: 75%;
 	transform: translate(-20%, 10%);
-	height: 30%;
+	height: 40%;
 }
 
 .pokemon__data {
 	position: absolute;
 	font-weight: 600;
 	color: #aaa;
-	top: 54.5%;
-	right: 27%;
+	top: 55.5%;
+	right: 15%;
 	font-size: clamp(8px, 5vw, 25px);
 	
 }
@@ -52,13 +47,14 @@ main {
 .pokemon__name {
 	color: #3a444d;
 	text-transform: capitalize;
+
 }
 
 .form {
 	position: absolute;
-	width: 67.3%;
+	width: 81%;
 	top: 65%;
-	left: 12.3%;
+	left:10%;
 }
 
 .input__search {
@@ -68,7 +64,7 @@ main {
 	text-align: center;
 	border: 2px solid #333;
 	border-radius: 9px;
-	background-color: rgb(227, 227, 227);
+	background-color: rgba(227, 227, 227);
 	font-weight: 600px;
 	color: #3a444d;
 	font-size: clamp(8px, 5vw, 1rem);
@@ -81,17 +77,14 @@ main {
   position: absolute;
   bottom: 9%;
 	border-color: 2px 2px black;
-  left: 12.2%;
+  left: 10%;
   display: none;
 	box-shadow: -2px 2px 2px black, -5px 6px 0 #888, -7px 8px 0 #333;
 	font-weight: 600px;
 	border-radius: 9px;
 	padding: 2%;
-	width: 67.3%;
-	padding-left: 17%;
-/*	outline: none;
-	text-align: center;*/
-
+	width: 80%;
+	padding-left: 6%;
 }
 
 li {
@@ -111,8 +104,8 @@ li {
 .buttons {
 	position: absolute;
 	bottom: 10%;
-	left: 50%;
-	width: 67.2%;
+	left: 56%;
+	width: 80%;
 	transform: translate(-57%, 0);
 	display: flex;
 	gap: 20px;
@@ -122,7 +115,7 @@ li {
 	width: 50%;
 	padding: 4%;
 	border: 2px solid #000;
-	border-radius: 5px;
+	border-radius: 10px;
 	font-size: clamp(5px, 5vw, 1rem);
 	font-weight: 600;
 	color: white;
@@ -131,41 +124,53 @@ li {
 }
 
 .button:active{
-	box-shadow: inset -4px 4px 0 #222;
+	box-shadow: inset -3px 3px 0 #222;
 	font-size: 0.9rem;
+	box-shadow: -1px 1px 0 #222, -2px 4px 0 #000;
+
 }
 
 .shiny {
   position: absolute;
-  top: 14%;
-  left: 56%;
-  border: 1px solid rgb(88, 88, 88);
-	background-image: radial-gradient(at top left, rgb(22, 204, 22), #aaa);
+  top: 12.5%;
+  left: 63%;
+	border: 2px solid black;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 25%;
+	color: white;
+	background-color: #444;
+	box-shadow: inset -3px 3px 0 #222;
+	box-shadow: -1px 1px 0 #222, -2px 4px 0 #000;
 
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  box-shadow: -2px 2px 2px 3px #e3e3e3, -6px 6px 0 #000;
 }
 
 .shiny:active {
-  box-shadow: inset -2px 2px 0 #222, -2px 2px 2px 3px #e3e3e3, -6px 6px 0 #000;
+	box-shadow: inset -0px 0px 0 #222;
+	font-size: 0.7rem;
+	box-shadow: -0px 0px 0 #222, -1px 2px 0 #000;
+
 }
 
 .btn__stats {
   position: absolute;
-  top: 14%;
-  left: 69%;
-  border: 1px solid rgb(88, 88, 88);
-/*  background-color: rgb(22, 86, 204);*/
-	background-image: radial-gradient(at top left, rgb(22, 86, 204), #aaa);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  box-shadow: -2px 2px 2px 3px #e3e3e3, -6px 6px 0 #000;
+  top: 12.5%;
+  left: 78%;
+  width: 3rem;
+  height: 3rem;
+	color: white;
+	background-color: #444;
+  border-radius: 25%;
+	border: 2px solid black;
+	box-shadow: inset -3px 3px 0 #222;
+	box-shadow: -1px 1px 0 #222, -2px 4px 0 #000;
+
 }
 
 .btn__stats:active {
-  box-shadow: inset -2px 2px 0 #222, -2px 2px 2px 3px #e3e3e3, -6px 6px 0 #000;
+	box-shadow: inset -0px 0px 0 #222;
+	font-size: 0.7rem;
+	box-shadow: -0px 0px 0 #222, -1px 2px 0 #000;
 }
+
 
