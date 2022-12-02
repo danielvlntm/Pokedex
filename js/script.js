@@ -2,6 +2,16 @@ const pokemonName = document.querySelector(".pokemon__name");
 const pokemonNumber = document.querySelector(".pokemon__number");
 const pokemonImage = document.querySelector(".pokemon__image");
 
+const current_rotation = 0;
+const ope= document.querySelector(".open");
+const capa = document.querySelector(".capa");
+
+const type = document.querySelector(".type");
+const ability = document.querySelector(".ability");
+const back = document.querySelector(".display");
+
+const display = document.querySelector(".display");
+
 const pokemonIcon = document.querySelector(".pokemon__anime");
 
 const form = document.querySelector(".form");
@@ -21,8 +31,29 @@ const def = document.querySelector(".def");
 const satk = document.querySelector(".satk");
 const sdef = document.querySelector(".sdef");
 const spd = document.querySelector(".spd");
+const rod = document.querySelector(".rot");
+
 
 let searchPokemon = 2;
+
+function abre(){
+  capa.style.display = "block";
+  document.getElementById('cp').style.animation = "capa 1.3s";
+
+  setTimeout(() => {
+    timm();
+  }, 1300);
+}
+function timm() {
+  capa.style.display = "none";
+}
+function fecha(){
+  capa.style.display = "block";
+  document.getElementById('cp').style.animation = "cape 1.3s";
+}
+
+
+
 
 async function fetchPokemon(pokemon) {
   const APIResponse = await fetch(
@@ -40,12 +71,16 @@ async function renderPokemon(pokemon) {
 
   pokemonName.innerHTML = "Loading...";
   pokemonNumber.innerHTML = "";
+  pokemonImage.style.display = "block";
+  pokemonImage.src = "images/loading.svg";
 
   const data = await fetchPokemon(pokemon);
 
   if (data) {
-    pokemonImage.style.display = "block"
-    pokemonName.innerHTML = data.name;
+//    back.innerHTML = `https://pokeapi.co/api/v2/pokemon-color/7`;
+
+    pokemonImage.style.display = "block";
+    pokemonName.innerHTML = data.species.name;
     pokemonNumber.innerHTML = data.id;
     pokemonImage.src = 
 //      data["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"]
@@ -63,13 +98,15 @@ async function renderPokemon(pokemon) {
   }
 
   let showShiny = false;
+  pokemonIcon.src = "images/loading.svg";
 
   shiny.addEventListener("click", () => {
 
     showShiny = !showShiny;
 
     if (showShiny === true) {
-//            pokemonImage.style.display = "block";
+        pokemonImage.src = "images/loading.svg";
+
       if (pokemonName.innerHTML === "Not found!") {
         pokemonImage.style.display = "none";
         stats.style.display = "none";
@@ -83,19 +120,12 @@ async function renderPokemon(pokemon) {
       if (data.id > 898) {
         pokemonImage.src = data["sprites"]["other"]["official-artwork"]["front_default"]
         showShiny.style.display = "none";
-//        showStats.style.display = "none";
       }
       pokemonImage.src = 
 //        data["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_shiny"];
         data["sprites"]["other"]["home"]["front_default"]
 
     } else {
-//      if (data.id > 899){
-
-//          pokemonImage.src = 
-//          data["sprites"]["other"]["home"]["front_default"]
-
-//    } if (data.id > 899) {
       
       if (pokemonName.innerHTML === "Not found!") {
         pokemonImage.style.display = "none";
@@ -104,6 +134,7 @@ async function renderPokemon(pokemon) {
         showShiny.style.display = "none";
         showStats.style.display = "none";
       } else {
+
         pokemonImage.style.display = "block";
        pokemonImage.src = 
         data["sprites"]["other"]["official-artwork"]["front_default"]      
@@ -115,11 +146,16 @@ async function renderPokemon(pokemon) {
   let showStats = false;
   btnStats.addEventListener("click", () => {
     typeWrite(titulo);
+
+    pokemonIcon.style.display = "block";
+    pokemonIcon.src = "images/loading.svg";
     /*    pokemonImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png`*/
 
 
     if (data.id < 650) {
+
     pokemonIcon.style.display = "block";
+
     pokemonIcon.src = 
       data["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"]
 //      data["sprites"]["other"]["official-artwork"]["front_default"]
@@ -155,9 +191,13 @@ async function renderPokemon(pokemon) {
       hp.innerHTML = `<span style="color: black; text-align: left;">Hp:</span> ${data["stats"]["0"]["base_stat"]}`;
       atk.innerHTML = `<span style="color: black">Attack:</span> ${data["stats"]["1"]["base_stat"]}`;
       def.innerHTML = `<span style="color: black">Deffense:</span> ${data["stats"]["2"]["base_stat"]}`;
-      satk.innerHTML = `<span style="color: black">Sp. Attack:</span> ${data["stats"]["3"]["base_stat"]}`;
-      sdef.innerHTML = `<span style="color: black">Sp. Deffense:</span> ${data["stats"]["4"]["base_stat"]}`;
+//      satk.innerHTML = `<span style="color: black">Sp. Attack:</span> ${data["stats"]["3"]["base_stat"]}`;
+//      sdef.innerHTML = `<span style="color: black">Sp. Deffense:</span> ${data["stats"]["4"]["base_stat"]}`;
       spd.innerHTML = `<span style="color: black">Speed:</span> ${data["stats"]["5"]["base_stat"]}`;
+      type.innerHTML = `<span style="color: black">Type: </span>${data["types"]["0"]["type"]["name"]}`;
+      ability.innerHTML = `<span style="color: black">Ability: </span>${data["abilities"]["0"]["ability"]["name"]}, ${data["abilities"]["1"]["ability"]["name"]}`;
+
+
     } else {
       form.style.display = "inline-block";
       btns.style.display = "flex";
@@ -186,14 +226,10 @@ btnNext.addEventListener("click", () => {
     renderPokemon(searchPokemon);
   }
 
+
 });
 
 renderPokemon(searchPokemon);
-
-
-
-
-
 
 function typeWrite(elemento){
     const textoArray = elemento.innerHTML.split('');
@@ -208,6 +244,12 @@ function typeWrite(elemento){
 }
 const titulo = document.querySelector('.tit');
 //typeWrite(titulo);
+
+
+
+
+
+
 
 
 
