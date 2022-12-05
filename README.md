@@ -1,3 +1,4 @@
+<img src="./images/icone.png" alt="ícone de Pokédex">
 # POKEDEX
 Pokédex desenvolvida com HTML CSS e JavaScript usando a API pokeapi.co
 
