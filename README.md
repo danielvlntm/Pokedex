@@ -17,7 +17,12 @@
 <p><a href="https://dani3lvalentim.github.io/Pokedex/">Ver Pokédex</a></p>
 <p>É isso, espero que gostem!</p>
 
-## Tecnologias Utilizadas
-<p>Pokédex desenvolvida com HTML CSS e JavaScript</p>
+## Linguagens Utilizadas
+<div>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+</div>
+<br>
 <p>Utiliza a API <a href="https://www.pokeapi.co">pokeapi.co</p>
 
