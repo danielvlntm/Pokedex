@@ -14,7 +14,7 @@
 <p>Use o botão "Icon" para visualizar um ícone diferente, do mesmo personagem, mas com um aspecto 3D</p>
 <p>Use o botão "Info" para visualizar informações como: attack, defesa e velocidade, bem como uma animação em miniatura do Pokémon.</p>
 <p>Use o botão "Close" para fechar a Pokédex.</p>
-<p><a href="https://dani3lvalentim.github.io/Pokedex/">Ver Pokédex</a></p>
+<p><a href="https://danielvlntm.github.io/Pokedex/">Ver Pokédex</a></p>
 <p>É isso, espero que gostem!</p>
 
 ## Linguagens Utilizadas
